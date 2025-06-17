@@ -11,8 +11,7 @@ interface ButtonProps {
 const Button = ({
     children,
     onClick,
-    disabled = false,
-    className = ''
+    disabled = false
 }: ButtonProps) => {
     console.log('children');
     

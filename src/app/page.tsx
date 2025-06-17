@@ -14,13 +14,13 @@ export default function Home() {
             <div className="relative flex">
               <p className="font-medium text-xl border border-gray py-2.5 px-5">
                 With great power comes great electricity bill
-                <span className="absolute text-4xl text-gray -top-3 left-2 bg-background h-4">"</span>
+                <span className="absolute text-4xl text-gray -top-3 left-2 bg-background h-4">&quot;</span>
               </p>
             </div>
             <div className="relative flex self-end">
               <span className="font-medium text-xl border border-gray border-t-0 py-2.5 px-5 self-end">
                 - Dr. Who
-                <span className="absolute text-4xl text-gray -top-3 right-2 bg-background h-4">"</span>
+                <span className="absolute text-4xl text-gray -top-3 right-2 bg-background h-4">&quot;</span>
               </span>
             </div>
           </div>
