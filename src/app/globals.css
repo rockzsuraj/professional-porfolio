@@ -1,26 +1,71 @@
+/* src/app/globals.css */
 @import "tailwindcss";
+/* Only this import is needed in v4.1+ */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Define your color variables */
+    --color-primary: #C778DD;
+    --color-gray: #ABB2BF;
+    --color-background: #282C33;
+    --color-white: #FFFFFF;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-white);
+    min-height: 100vh;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+
+  /* Custom background utilities */
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .bg-gray {
+    background-color: var(--color-gray);
+  }
+
+  .bg-background {
+    background-color: var(--color-background);
+  }
+
+  .bg-white {
+    background-color: var(--color-white);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-gray {
+    color: var(--color-gray);
+  }
+
+  .text-background {
+    color: var(--color-background);
+  }
+
+  .text-white {
+    color: var(--color-white);
+  }
+
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+
+  .border-gray {
+    border-color: var(--color-gray);
+  }
+
+  .border-background {
+    border-color: var(--color-background);
+  }
+
+  .border-white {
+    border-color: var(--color-white);
+  }
 }
