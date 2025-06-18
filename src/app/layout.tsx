@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className=''>
       <body className={`${inter.className} flex flex-col min-h-screen pl-5 pr-5 md:pl-0 md:pr-0`}>
-        <div className='flex flex-1 overflow-hidden'>
+        <div className='flex flex-1'>
           <div className='hidden md:flex overflow-hidden'>
             <Sidebar />
           </div>

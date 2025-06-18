@@ -6,11 +6,11 @@ import Hero from "./components/sections/Hero";
 export default function Home() {
   return (
     <main className="flex flex-col">
-      <section className="">
+      <section className="flex flex-col">
         <Hero />
       </section>
-      <section className="">
-        <div className="flex flex-col  justify-center items-center">
+      <section className="flex-1">
+        <div className="flex flex-col justify-center items-center">
           <div className="flex flex-col">
             <div className="relative flex">
               <p className="font-medium text-medium border border-gray py-5 px-5">
