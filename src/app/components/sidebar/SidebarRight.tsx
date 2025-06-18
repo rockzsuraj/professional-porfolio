@@ -3,7 +3,7 @@ import Icon from '../icons/icons'
 
 const SidebarRight = () => {
     return (
-        <aside className='h-full w-10'>
+        <aside className='h-full w-20'>
             <div className='h-full flex flex-col items-end'>
                 <div className='h-1/2' />
                 <div className="w-10 h-30 border-1 border-r-0 border-gray" />

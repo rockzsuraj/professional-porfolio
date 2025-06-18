@@ -19,13 +19,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className=''>
       <body className={`${inter.className} flex flex-col min-h-screen pl-5 pr-5 md:pl-0 md:pr-0`}>
-        <div className='flex flex-1'>
+        <div className='flex flex-1 overflow-hidden'>
           <div className='hidden md:flex overflow-hidden'>
             <Sidebar />
           </div>
-          <div className='flex-1 flex flex-col'>
+          <div className='flex-1 flex flex-col '>
             <Header />
             <main className='flex-1'>
               {children}

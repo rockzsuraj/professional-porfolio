@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { navLinks } from '@/config/navigation';
 import Icon from '../icons/icons';
+import { icons } from '@/lib/constants';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +23,7 @@ export default function Header() {
             Suraj
           </div>
         </div>
-        
+
         {/* Desktop Navigation */}
         <nav className='hidden md:flex'>
           {navLinks.map((link) => (
@@ -37,9 +38,9 @@ export default function Header() {
             </div>
           ))}
         </nav>
-        
+
         {/* Mobile Navigation Toggle */}
-        <button 
+        <button
           className='md:hidden focus:outline-none'
           onClick={toggleMenu}
           aria-label="Toggle menu"
@@ -51,23 +52,32 @@ export default function Header() {
           )}
         </button>
       </div>
-      
+
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <nav className='md:hidden flex flex-col pt-6 pb-10'>
-          {navLinks.map((link) => (
-            <div key={link.href} className='py-2'>
-              <span className='text-xl text-primary'>#</span>
-              <Link
-                href={link.href}
-                className="text-xl font-extralight text-gray hover:text-white hover:font-medium pl-1"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.name}
+        <div className=''>
+          <nav className='md:hidden flex flex-col pt-6 pb-10'>
+            {navLinks.map((link) => (
+              <div key={link.href} className='py-2'>
+                <span className='text-xl text-primary'>#</span>
+                <Link
+                  href={link.href}
+                  className="text-xl font-extralight text-gray hover:text-white hover:font-medium pl-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              </div>
+            ))}
+          </nav>
+          <div className='flex flex-row justify-center'>
+            {icons.map(icon => (
+              <Link key={icon.alt} href={icon.alt}>
+                <Icon alt={icon.alt} src={icon.src} />
               </Link>
-            </div>
-          ))}
-        </nav>
+            ))}
+          </div>
+        </div>
       )}
     </header>
   );

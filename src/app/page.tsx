@@ -1,31 +1,35 @@
 'use client';
+
+import Projects from "./components/cards/Projects";
 import Hero from "./components/sections/Hero";
 
 export default function Home() {
   return (
-    <main>
-      <div>
-        <div >
-          <Hero />
-        </div>
-        {/* Quote Section */}
-        <div className="flex flex-col mt-8  justify-center items-center">
-          <div className="">
+    <main className="flex flex-col">
+      <section className="">
+        <Hero />
+      </section>
+      <section className="">
+        <div className="flex flex-col  justify-center items-center">
+          <div className="flex flex-col">
             <div className="relative flex">
-              <p className="font-medium text-xl border border-gray py-2.5 px-5">
+              <p className="font-medium text-medium border border-gray py-5 px-5">
                 With great power comes great electricity bill
                 <span className="absolute text-4xl text-gray -top-3 left-2 bg-background h-4">&quot;</span>
               </p>
             </div>
             <div className="relative flex self-end">
-              <span className="font-medium text-xl border border-gray border-t-0 py-2.5 px-5 self-end">
+              <p className="font-medium text-medium border border-gray border-t-0 py-5 px-5">
                 - Dr. Who
                 <span className="absolute text-4xl text-gray -top-3 right-2 bg-background h-4">&quot;</span>
-              </span>
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section className="">
+        <Projects />
+      </section>
     </main>
   );
 }
