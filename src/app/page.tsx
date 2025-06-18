@@ -1,6 +1,7 @@
 'use client';
 
 import Projects from "./components/cards/Projects";
+import Skills from "./components/cards/Skills";
 import Hero from "./components/sections/Hero";
 
 export default function Home() {
@@ -29,6 +30,9 @@ export default function Home() {
       </section>
       <section className="">
         <Projects />
+      </section>
+      <section>
+        <Skills />
       </section>
     </main>
   );

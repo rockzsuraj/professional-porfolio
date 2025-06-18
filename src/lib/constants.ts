@@ -1,16 +1,16 @@
 export const icons = [
-    {
-        src: 'github.svg',
-        alt: 'github'
-    },
-    {
-        src: 'linkedin.svg',
-        alt: 'linkedin'
-    },
-    {
-        src: 'email.svg',
-        alt: 'email'
-    }
+  {
+    src: 'github.svg',
+    alt: 'github'
+  },
+  {
+    src: 'linkedin.svg',
+    alt: 'linkedin'
+  },
+  {
+    src: 'email.svg',
+    alt: 'email'
+  }
 ] as const
 
 export const projectsData = [
@@ -53,5 +53,52 @@ export const projectsData = [
     image: "https://images.unsplash.com/photo-1677442135136-760c813a743e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     techStacks: ["Python", "TensorFlow", "React", "Flask"],
     status: ["live", "cached"] // Both versions available
+  }
+];
+type SkillCategory = {
+  category: string;
+  technologies: string[];
+};
+
+export const skills: SkillCategory[] = [
+  {
+    category: "Programming Languages",
+    technologies: ["JavaScript", "TypeScript", "Python", "Java", "C#", "Go", "Rust"]
+  },
+  {
+    category: "Web Development",
+    technologies: ["HTML", "CSS", "Sass", "Less"]
+  },
+  {
+    category: "Frontend Frameworks",
+    technologies: ["React", "Next.js", "Vue", "Angular", "Svelte"]
+  },
+  {
+    category: "Backend Technologies",
+    technologies: ["Node.js", "Express", "NestJS", "Spring Boot", "Django", "Flask"]
+  },
+  {
+    category: "Mobile Development",
+    technologies: ["React Native", "Flutter", "Swift", "Kotlin"]
+  },
+  {
+    category: "Databases",
+    technologies: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Firebase"]
+  },
+  {
+    category: "Cloud & DevOps",
+    technologies: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform"]
+  },
+  {
+    category: "Testing",
+    technologies: ["Jest", "Cypress", "Testing Library", "Mocha", "Chai"]
+  },
+  {
+    category: "Tools",
+    technologies: ["VS Code", "Git", "Postman", "Figma", "Jira", "Webpack"]
+  },
+  {
+    category: "Other",
+    technologies: ["GraphQL", "REST API", "WebSockets", "WebRTC"]
   }
 ];

@@ -3,18 +3,21 @@ import Icon from '../icons/icons';
 import { icons } from '@/lib/constants';
 
 export default function Sidebar() {
- 
+
   return (
     <aside className="h-full w-30">
-      <div className='h-full flex flex-col'>
-        <div className="h-1/6 w-0.5 bg-gray ml-auto mr-auto" />
-        <div className="ml-auto mr-auto">
-          {icons.map(icon => {
-            return <Link href={icon.alt} key={icon.alt}>
-              <Icon key={icon.alt} src={icon.src} alt={icon.alt} />
-            </Link>
-          })}
+      <div className='h-full'>
+        <div className='h-full fixed flex-1 flex-col w-30'>
+          <div className="h-1/6 w-0.5 bg-gray ml-auto mr-auto" />
+          <div className="flex flex-col items-center">
+            {icons.map(icon => {
+              return <Link href={icon.alt} key={icon.alt}>
+                <Icon key={icon.alt} src={icon.src} alt={icon.alt} />
+              </Link>
+            })}
+          </div>
         </div>
+
         <div className="h-1/2" />
         <div className="w-20 border-1 border-(--color-gray) h-60 -translate-x-1/2" />
         <div className="h-1/4" />
