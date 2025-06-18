@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       <div>
-        <div className="block">
+        <div >
           <Hero />
         </div>
         {/* Quote Section */}

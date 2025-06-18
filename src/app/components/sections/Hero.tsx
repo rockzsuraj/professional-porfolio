@@ -48,7 +48,7 @@ export default function Hero() {
                 height={900}
                 style={{ content: '' }}
               />
-              <div className="transform translate-x-60 -translate-y-28">
+              <div className="w-20 h-20 transform translate-x-60 -translate-y-28">
                 <Icon src="dots.svg" alt="Decorative dots" width={70} height={70} />
               </div>
             </div>

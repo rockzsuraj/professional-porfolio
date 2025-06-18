@@ -25,12 +25,12 @@ export default function Sidebar() {
           })}
         </div>
         <div className="h-1/2" />
-        <div className="w-30 border-1 border-(--color-gray) h-30 -translate-x-1/2" />
-        <div className="h-1/2" />
+        <div className="w-20 border-1 border-(--color-gray) h-60 -translate-x-1/2" />
+        <div className="h-1/4" />
         <div className="transform -translate-x-1/6">
           <Icon src="dots.svg" alt="dots" />
         </div>
-        <div className='h-1/4' />
+        <div className='h-1/8' />
       </div>
     </aside>
   )
