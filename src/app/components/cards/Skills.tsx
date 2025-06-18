@@ -10,10 +10,10 @@ const Skills = () => {
                 <SectionHeading title='skills' />
             </div>
             <div className='flex flex-col lg:flex-row mt-10'>
-                <div className=''>
+                <div className='flex'>
                     <SkillGraphics />
                 </div>
-                <div className='pt-20'>
+                <div className='flex flex-row pt-15'>
                     <SkillCard />
                 </div>
             </div>
