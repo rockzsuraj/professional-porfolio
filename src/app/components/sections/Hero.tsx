@@ -37,7 +37,7 @@ export default function Hero() {
               <div className="w-10 h-10 border border-primary border-l-0" />
             </div>
           </div>
-          <div className=" w-80 h-70 transform -translate-y-40 translate-x-15 ">
+          <div className=" w-70 md:w-90 h-70 transform -translate-y-40 translate-x-15">
             <Image
               src="/image/pic.png"
               alt="Profile picture"
@@ -48,7 +48,7 @@ export default function Hero() {
               <p className="bg-primary h-3 w-3 mr-1" />
               <p className="text-gray text-sm fontsize-10">Currently working on <span className="text-white">Portfolio</span></p>
             </div>
-            <div className=" w-15 h-15 transform translate-x-60 -translate-y-30">
+            <div className=" w-15 h-15 transform translate-x-55 -translate-y-32 md:-translate-y-30 md:translate-x-60">
               <Icon src="dots.svg" alt="Decorative dots" width={60} height={60} />
             </div>
           </div>
