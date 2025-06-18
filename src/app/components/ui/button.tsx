@@ -1,6 +1,5 @@
 'use client'
 import React, { ReactNode, MouseEvent } from 'react';
-import Icon from '../icons/icons';
 
 interface ButtonProps {
     children: ReactNode;

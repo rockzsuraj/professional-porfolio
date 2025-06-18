@@ -16,7 +16,7 @@ interface Props {
 }
 
 const ProjectCard: FC<Props> = ({ project }) => {
-    const { description, id, image, techStacks, status, title } = project;
+    const { description, image, techStacks, status, title } = project;
     return (
         <div className='w-80 h-120 mr-5 mb-5 border-1'>
             <div className='relative w-full h-50'>
