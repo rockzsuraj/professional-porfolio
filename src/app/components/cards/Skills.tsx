@@ -1,6 +1,5 @@
 import React from 'react'
 import SectionHeading from '../heading/SectionHeading'
-import { skills } from '@/lib/constants'
 import SkillGraphics from '@/app/graphics/SkillGraphics'
 import SkillCard from '../ui/SkillCard'
 
