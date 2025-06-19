@@ -6,9 +6,9 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <div className='flex flex-col pb-8'>
-      <div className='flex flex-col md:flex-row border-t-1 mt-20 justify-between md:px-50'>
+      <div className='flex flex-col md:flex-row border-t-1 mt-20 justify-between md:px-20'>
         <div className='flex flex-col p-10'>
-          <div className='flex flex-row items-center'>
+          <div className='flex flex-row self-center'>
             <div className='w-7'>
               <Icon src='logo1.svg' alt='logo' />
             </div>

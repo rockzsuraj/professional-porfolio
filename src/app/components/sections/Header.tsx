@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className=' py-5'>
       <div className='flex flex-row justify-between items-center'>
-        <div className='flex flex-row items-center'>
+        <div className='flex flex-row items-center pl-5'>
           <div>
             <Icon alt='logo1' src='logo1.svg' height={25} width={25} />
           </div>
@@ -46,7 +46,7 @@ export default function Header() {
           aria-label="Toggle menu"
         >
           {isMenuOpen ? (
-            <span className='text-2xl text-gray'>X</span>
+            <span className='text-2xl text-gray pr-5'>X</span>
           ) : (
             <Icon src='hamburger.svg' alt='hamburger menu' />
           )}
@@ -55,8 +55,8 @@ export default function Header() {
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className=''>
-          <nav className='md:hidden flex flex-col pt-6 pb-10'>
+        <div className='flex flex-col'>
+          <nav className='md:hidden flex flex-col pt-6 pb-10 pl-5'>
             {navLinks.map((link) => (
               <div key={link.href} className='py-2'>
                 <span className='text-xl text-primary'>#</span>

@@ -50,7 +50,7 @@ export const projectsData = [
     id: 5,
     title: "AI Image Generator",
     description: "Web application that generates custom artwork using machine learning models.",
-    image: "https://images.unsplash.com/photo-1677442135136-760c813a743e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1650421120432-178ec62cd849?q=80&w=1746&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     techStacks: ["Python", "TensorFlow", "React", "Flask"],
     status: ["live", "cached"] // Both versions available
   }
@@ -101,4 +101,83 @@ export const skills: SkillCategory[] = [
     category: "Other",
     technologies: ["GraphQL", "REST API", "WebSockets", "WebRTC"]
   }
+];
+
+export const smallProjects = [
+  {
+    name: "Discord.js Bot Boilerplate",
+    tech: ["Discord.js", "TypeScript"],
+    description: "Start creating scalable Discord.js bots with TypeScript in seconds.",
+    link: "Github"
+  },
+  {
+    name: "Vue Blog Frontend",
+    tech: ["Vue", "CSS", "JS"],
+    description: "Front-end of my future blog website written in Vue.",
+    link: "Live"
+  },
+  {
+    name: "Chess Service Landing Page",
+    tech: ["Figma", "CSS"],
+    description: "Figma landing page about a service for viewing chess tournaments.",
+    link: "Github"
+  },
+  {
+    name: "Crash Protect Website",
+    tech: ["HTML", "CSS", "JS"],
+    description: "Website for anti-raid, anti-crash Discord bot.",
+    link: "Github"
+  },
+  {
+    name: "CSS Experiments",
+    tech: ["CSS"],
+    description: "Collection of my different little projects in CSS.",
+    link: "Github"
+  },
+  {
+    name: "Web Dev Neovim Config",
+    tech: ["Lua", "NeoVim"],
+    description: "Config for Neovim perfect for web developers.",
+    link: "Github"
+  },
+  {
+    name: "Anti-Raid Bot Figma Template",
+    tech: ["Figma"],
+    description: "Figma template for website about anti-raid Discord bot.",
+    link: "Figma"
+  },
+  {
+    name: "Ooku School Website",
+    tech: ["Python", "Flask", "HTML"],
+    description: "School website built with Flask.",
+    link: "Github"
+  },
+  {
+    name: "Link Shortener with Auth",
+    tech: ["Flask", "Quart", "HTML"],
+    description: "Simple link shortener with authentication.",
+    link: "Github"
+  },
+  {
+    name: "Chess Pro Discord Bot",
+    tech: ["Discord.js", "TypeScript"],
+    description: "Discord bot for playing and managing chess tournaments.",
+    link: "Github"
+  },
+  {
+    name: "Figma School Template",
+    tech: ["Figma"],
+    description: "Figma template website for my school.",
+    link: "Github"
+  }
+];
+
+export const aboutMe = [
+  "❄️ I like winter more than summer",
+  "🚴 I often bike with my friends",
+  "🍕 I like pizza and pasta",
+  "✈️ I was in Egypt, Poland and Turkey",
+  "🎥 My favorite movie is The Green Mile",
+  "🏫 I am still in school",
+  "👪 I don’t have any siblings"
 ];

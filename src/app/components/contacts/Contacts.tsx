@@ -16,7 +16,6 @@ const Contacts = () => {
                     <MessageMe />
                 </div>
             </div>
-
         </div>
     )
 }

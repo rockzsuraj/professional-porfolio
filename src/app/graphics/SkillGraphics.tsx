@@ -3,7 +3,7 @@ import Icon from '../components/icons/icons'
 
 const SkillGraphics = () => {
     return (
-        <div className='flex flex-col w-80 h-80 pt-10'>
+        <div className='flex flex-col w-80 h-80 pt-10 md:mr-10'>
             <div className='flex pt-10'>
                 <div>
                     <Icon alt='dots' src='dots.svg' width={70}/>
