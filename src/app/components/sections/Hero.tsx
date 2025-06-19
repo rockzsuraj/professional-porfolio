@@ -1,8 +1,16 @@
+import { useState } from "react";
 import Icon from "../icons/icons";
 import Button from "../ui/button";
 import Image from "next/image";
+import ContactForm from "../form/ContactForm";
 
 export default function Hero() {
+  const [modelOpen, setModelOpen] = useState(false)
+
+  const handleContactForm = () => {
+    setModelOpen(!modelOpen);
+  }
+
   return (
     <section className="pt-20 flex flex-col md:flex-row">
       <div className="">
@@ -18,12 +26,21 @@ export default function Hero() {
           </p>
           <div>
             <Button
-              onClick={(e) => console.log('Clicked', e)}
+              onClick={handleContactForm}
               disabled={false}
               className="mt-6"
             >
               Contact Me!!
             </Button>
+            <div>
+              {
+                modelOpen && (
+                  <div className="flex">
+                    <ContactForm close={handleContactForm} />
+                  </div>
+                )
+              }
+            </div>
           </div>
         </div>
       </div>

@@ -19,6 +19,7 @@ const Button = ({
 
     return (
         <button
+            type='button'
             onClick={onClick}
             disabled={disabled}
             className={`hover:bg-[#C778DD33] transition-colors border-1 border-${disabled ? 'gray' : 'primary'} my-5 text-sm py-1 px-5`}
