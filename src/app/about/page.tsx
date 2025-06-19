@@ -4,7 +4,6 @@ import PageHeading from "../components/heading/PageHeading";
 import About from "../components/shared/About";
 import SkillCard from "../components/ui/SkillCard";
 import AboutMeGraphics from "../graphics/AboutMeGraphics";
-import SkillGraphics from "../graphics/SkillGraphics";
 
 const about = () => {
     return (
@@ -38,7 +37,7 @@ const about = () => {
                 <div className="flex gap-6 flex-wrap pt-5">
                     {
                         aboutMe.map(me => (
-                            <div className="border-1 border-gray">
+                            <div key={me} className="border-1 border-gray">
                                 <p className="text-sm font-extralight p-3">
                                     {me}
                                 </p>

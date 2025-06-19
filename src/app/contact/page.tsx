@@ -1,5 +1,4 @@
 import { icons } from "@/lib/constants";
-import Contacts from "../components/contacts/Contacts";
 import Heading from "../components/heading/Heading";
 import PageHeading from "../components/heading/PageHeading";
 import Icon from "../components/icons/icons";
