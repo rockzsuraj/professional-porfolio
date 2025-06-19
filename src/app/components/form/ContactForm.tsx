@@ -1,5 +1,4 @@
 import React, { FC, useState } from 'react'
-import Button from '../ui/button';
 
 interface Props {
     close: () => void;
@@ -13,15 +12,19 @@ const ContactForm: FC<Props> = (props) => {
         message: ''
     })
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState(null);
+    // const [submitStatus, setSubmitStatus] = useState(null);
 
-    const handleChange = (e) => {
+    const handleChange = (e: { target: { name: string; value: string } }) => {
         const { name, value } = e.target;
         setFormData(prev => ({
             ...prev,
             [name]: value
         }));
     };
+
+    const handleSetSubmitting = () => {
+        setIsSubmitting(true)
+    }
 
     return (
         <div className='fixed inset-0 flex items-center justify-center z-30 backdrop-blur-none'>
@@ -69,6 +72,7 @@ const ContactForm: FC<Props> = (props) => {
                                     type="submit"
                                     disabled={isSubmitting}
                                     className={`hover:bg-[#C778DD33] transition-colors border-1 border-${isSubmitting ? 'gray' : 'primary'} my-5 text-sm py-1 px-5`}
+                                    onClick={handleSetSubmitting}
                                 >
                                     {isSubmitting ? 'Sending...' : 'Send'}
                                 </button>
