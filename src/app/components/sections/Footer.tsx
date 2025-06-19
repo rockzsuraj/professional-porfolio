@@ -6,7 +6,7 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <div className='flex flex-col pb-8'>
-      <div className='flex flex-col md:flex-row border-t-1 mt-20 justify-between'>
+      <div className='flex flex-col md:flex-row border-t-1 mt-20 justify-between md:px-50'>
         <div className='flex flex-col p-10'>
           <div className='flex flex-row items-center'>
             <div className='w-7'>
@@ -15,13 +15,13 @@ const Footer = () => {
             <div>
               <p className='font-medium'>Suraj</p>
             </div>
-            <div className='text-gray md:pl-10 font-light'>
+            <div className='text-gray pl-2 font-light self-center'>
               <p>
                 mail4suraj11@gmail.com
               </p>
             </div>
           </div>
-          <div className='pt-5'>
+          <div className='pt-5 self-center md:self-start'>
             <p>Full stack developer</p>
           </div>
         </div>

@@ -37,14 +37,14 @@ export default function Hero() {
               <div className="w-10 h-10 border border-primary border-l-0" />
             </div>
           </div>
-          <div className=" w-70 md:w-90 h-70 transform -translate-y-40 translate-x-15">
+          <div className=" w-70 md:w-90 h-60 transform -translate-y-40 translate-x-15">
             <Image
               src="/image/pic.png"
               alt="Profile picture"
               width={300}
               height={300}
             />
-            <div className="flex items-center border-1 w-75 px-2 py-1 border-gray">
+            <div className="flex items-center border-1 max-w-65 px-2 py-1 border-gray">
               <p className="bg-primary h-3 w-3 mr-1" />
               <p className="text-gray text-sm fontsize-10">Currently working on <span className="text-white">Portfolio</span></p>
             </div>

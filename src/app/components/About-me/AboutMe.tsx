@@ -8,7 +8,7 @@ const AboutMe = () => {
       <div>
         <SectionHeading title='about-me' />
       </div>
-      <div className='flex'>
+      <div className='flex flex-col md:flex-row'>
         <div className='pt-10'>
           <div className='text-gray text-4 font-light'>
             <p>
@@ -24,7 +24,7 @@ const AboutMe = () => {
             </p>
           </div>
         </div>
-        <div className='md:transform md:-translate-y-20'>
+        <div className='md:transform md:-translate-y-20  max-w-70 md:max-w-full'>
           <AboutMeGraphics />
         </div>
       </div>

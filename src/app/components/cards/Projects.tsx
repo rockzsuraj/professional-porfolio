@@ -5,7 +5,7 @@ import { projectsData } from '../../../lib/constants'
 
 const Projects = () => {
   return (
-    <div className=''>
+    <div className='pl-5 pr-5'>
       <SectionHeading title='projects' />
       <div className='pt-15 flex flex-wrap'>
         {

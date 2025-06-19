@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky pt-8">
+    <header className=' py-5'>
       <div className='flex flex-row justify-between items-center'>
         <div className='flex flex-row items-center'>
           <div>

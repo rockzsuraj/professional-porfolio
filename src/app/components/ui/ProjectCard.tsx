@@ -18,9 +18,9 @@ interface Props {
 const ProjectCard: FC<Props> = ({ project }) => {
     const { description, image, techStacks, status, title } = project;
     return (
-        <div className='w-80 h-120 mr-5 mb-5 border-1'>
-            <div className='relative w-full h-50'>
-                <Image fill alt={title} src={image} className='object-cover w-full' />
+        <div className='w-70 md:w-90 mr-5 mb-5 border-1'>
+            <div className='relative h-50'>
+                <Image fill alt={title} src={image} className='object-cover' />
             </div>
             <div className='text-gray flex flex-wrap border-t-1 border-b-1 pt-2 pb-2'>
                 {
@@ -37,7 +37,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
             <div className='pl-4 pb-5'>
                 <p className='text-gray text-sm'>{description}</p>
             </div>
-            <div className='flex flex-row'>
+            <div className='flex flex-col md:flex-row flex-wrap'>
                 {
                     status.map(s => (
                         <div key={s} className='pl-4'>

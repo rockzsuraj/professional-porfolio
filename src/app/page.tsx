@@ -8,11 +8,11 @@ import Hero from "./components/sections/Hero";
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
-      <section className="flex flex-col">
+    <main className="flex flex-col ">
+      <section className="flex flex-col pl-5 pr-5">
         <Hero />
       </section>
-      <section className="flex-1">
+      <section className="flex-1 pl-5 pr-5">
         <div className="flex flex-col justify-center items-center">
           <div className="flex flex-col">
             <div className="relative flex">
@@ -33,13 +33,13 @@ export default function Home() {
       <section className="">
         <Projects />
       </section>
-      <section>
+      <section className="pl-5 pr-5">
         <Skills />
       </section>
-      <section>
+      <section className="pl-5 pr-5">
         <AboutMe />
       </section>
-      <section>
+      <section className="pl-5 pr-5">
         <Contacts />
       </section>
     </main>

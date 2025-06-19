@@ -20,14 +20,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className=''>
-      <body className={`${inter.className} flex flex-col min-h-screen md:pl-0 md:pr-0`}>
+      <body className={`${inter.className} flex flex-col`}>
         <div className='flex flex-1'>
           <div className='hidden md:flex overflow-hidden'>
             <Sidebar />
           </div>
-          <div className='flex-1 flex flex-col '>
+          <div className='flex-1 flex flex-col'>
             <Header />
-            <main className='flex-1 ml-5 mr-5'>
+            <main className=''>
               {children}
             </main>
           </div>
@@ -35,7 +35,7 @@ export default function RootLayout({
             <SidebarRight />
           </div>
         </div>
-        <Footer />
+          <Footer />
       </body>
     </html>
   );
