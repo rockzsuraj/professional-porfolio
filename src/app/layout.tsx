@@ -5,6 +5,7 @@ import Footer from './components/sections/Footer';
 import Header from './components/sections/Header';
 import Sidebar from './components/sidebar/Sidebar';
 import SidebarRight from './components/sidebar/SidebarRight';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -29,13 +30,14 @@ export default function RootLayout({
             <Header />
             <main className=''>
               {children}
+              <SpeedInsights />
             </main>
           </div>
           <div className='hidden md:flex overflow-hidden'>
             <SidebarRight />
           </div>
         </div>
-          <Footer />
+        <Footer />
       </body>
     </html>
   );
