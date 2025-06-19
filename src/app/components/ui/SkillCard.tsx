@@ -5,7 +5,7 @@ const SkillCard = () => {
     return (
         <div className="flex flex-row gap-6 flex-wrap md:ml-10">
             {skills.map((group) => (
-                <div key={group.category} className="border-1 w-40">
+                <div key={group.category} className="border-1 w-35 md:w-40">
                     <h3 className="font-bold text-medium p-3 justify-center items-center">{group.category}</h3>
                     <ul className="flex flex-wrap gap-2 border-t-1 p-2">
                         {group.technologies.map((tech) => (

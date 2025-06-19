@@ -12,11 +12,11 @@ const AboutMe = () => {
         <div className='pt-10'>
           <div className='text-gray text-4 font-light'>
             <p>
-              Hello, i’m Elias!
+              Hello, i’m Suraj!
             </p>
 
             <p className='pt-5'>
-              I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.
+              I’m a self-taught front-end developer based in Bihar, India. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences.
             </p>
 
             <p className='pt-5'>
@@ -24,7 +24,9 @@ const AboutMe = () => {
             </p>
           </div>
         </div>
-        <AboutMeGraphics />
+        <div className='md:transform md:-translate-y-20'>
+          <AboutMeGraphics />
+        </div>
       </div>
 
     </div>

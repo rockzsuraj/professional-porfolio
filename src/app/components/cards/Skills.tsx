@@ -9,11 +9,11 @@ const Skills = () => {
             <div>
                 <SectionHeading title='skills' />
             </div>
-            <div className='flex flex-col lg:flex-row mt-10'>
-                <div className='flex'>
+            <div className='flex flex-col lg:flex-row mt-10 justify-between'>
+                <div className=''>
                     <SkillGraphics />
                 </div>
-                <div className='flex flex-row pt-15'>
+                <div className='mt-20'>
                     <SkillCard />
                 </div>
             </div>

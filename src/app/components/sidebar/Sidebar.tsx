@@ -11,7 +11,7 @@ export default function Sidebar() {
           <div className="h-1/6 w-0.5 bg-gray ml-auto mr-auto" />
           <div className="flex flex-col items-center">
             {icons.map(icon => {
-              return <Link href={icon.alt} key={icon.alt}>
+              return <Link href={icon.alt} key={icon.alt} className='bg-background'>
                 <Icon key={icon.alt} src={icon.src} alt={icon.alt} />
               </Link>
             })}
@@ -19,10 +19,10 @@ export default function Sidebar() {
         </div>
 
         <div className="h-1/2" />
-        <div className="w-20 border-1 border-(--color-gray) h-60 -translate-x-1/2" />
+        <div className="w-40 border-1 border-(--color-gray) h-40 -translate-x-1/2" />
         <div className="h-1/4" />
         <div className="transform -translate-x-1/6">
-          <Icon src="dots.svg" alt="dots" />
+          <Icon src="dots.svg" alt="dots" width={70}/>
         </div>
         <div className='h-1/8' />
       </div>

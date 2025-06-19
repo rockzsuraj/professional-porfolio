@@ -6,7 +6,7 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <div className='flex flex-col pb-8'>
-      <div className='flex flex-row border-t-1 mt-20  justify-between'>
+      <div className='flex flex-col md:flex-row border-t-1 mt-20 justify-between'>
         <div className='flex flex-col p-10'>
           <div className='flex flex-row items-center'>
             <div className='w-7'>
@@ -15,7 +15,7 @@ const Footer = () => {
             <div>
               <p className='font-medium'>Suraj</p>
             </div>
-            <div className='text-gray pl-10 font-light'>
+            <div className='text-gray md:pl-10 font-light'>
               <p>
                 mail4suraj11@gmail.com
               </p>
@@ -25,9 +25,9 @@ const Footer = () => {
             <p>Full stack developer</p>
           </div>
         </div>
-        <div className='mt-10 p-2'>
+        <div className='self-center md:mt-10 p-2 flex flex-col items-center'>
           <h1 className='font-medium'>Media</h1>
-          <div className='flex pt-5'>
+          <div className='flex md:pt-5'>
             {
               icons.map(icon => (
                 <Link key={icon.alt} href={`/${icon.alt}`} className='w-10'>
