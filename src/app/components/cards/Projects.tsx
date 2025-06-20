@@ -2,25 +2,10 @@ import React from 'react'
 import SectionHeading from '../heading/SectionHeading'
 import ProjectCard from '../ui/ProjectCard'
 import { ProjectData } from '@/lib/constants';
-import axios from 'axios'
-
-async function fetchProjects() {
-  try {
-    const res = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/github-projects`, {
-      method: 'GET',
-      headers: { Accept: 'application/json' }
-    });
-
-    const data = await res.data;
-    return Array.isArray(data) ? data : [];
-  } catch (error) {
-    console.error('Error fetching projects:', error);
-    return [];
-  }
-}
+import { fetchGitHubProjects } from '@/lib/fetchGithubProjects';
 
 const Projects = async () => {
-  const projectsData: ProjectData[] = await fetchProjects();
+  const projectsData: ProjectData[] = await fetchGitHubProjects();
 
   return (
     <div className='pl-5 pr-5'>
