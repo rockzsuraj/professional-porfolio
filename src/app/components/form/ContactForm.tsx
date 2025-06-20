@@ -1,4 +1,5 @@
 'use client'
+import Logger from '@/lib/logger';
 import React, { ChangeEvent, FC, MouseEvent, useState } from 'react'
 
 interface Props {
@@ -43,7 +44,8 @@ const ContactForm: FC<Props> = (props) => {
             }
             setSubmitStatus('success');
             setFormData({ name: '', email: '', title: '', message: '' });
-        } catch (error) {
+        } catch (e: unknown) {
+            Logger.error('error submitting form!', e);
             setSubmitStatus('error');
         } finally {
             setIsSubmitting(false);

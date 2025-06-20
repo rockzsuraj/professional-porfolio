@@ -1,7 +1,6 @@
 import React from 'react'
 import Icon from '../icons/icons'
 import { icons } from '@/lib/constants'
-import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -30,9 +29,7 @@ const Footer = () => {
           <div className='flex md:pt-5'>
             {
               icons.map(icon => (
-                <Link key={icon.alt} href={`/${icon.alt}`} className='w-10'>
-                  <Icon src={icon.src} alt={icon.alt} />
-                </Link>
+                  <Icon key={icon.alt} url={icon.url} src={icon.src} alt={icon.alt} />
               ))
             }
           </div>

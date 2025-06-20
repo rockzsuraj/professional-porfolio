@@ -1,15 +1,17 @@
 import Image from 'next/image'
+import Link from 'next/link';
 
 interface Props {
     src: string;
     alt: string;
     height?: number;
-    width?: number
+    width?: number;
+    url?: string;
 }
 
-export default function Icon({ src, alt, height, width }: Props) {
+export default function Icon({ src, alt, height, width, url }: Props) {
     return (
-        <div className="icon-wrapper">
+        <Link href={url || ''} className="icon-wrapper hover:animate-pulse">
             <Image
                 src={`/${src}`}
                 alt={alt}
@@ -23,6 +25,6 @@ export default function Icon({ src, alt, height, width }: Props) {
                 }}
                 priority
             />
-        </div>
+        </Link>
     )
 }

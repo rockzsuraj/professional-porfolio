@@ -1,15 +1,20 @@
+import { projectUrl } from "@/config/projects";
+
 export const icons = [
   {
     src: 'github.svg',
-    alt: 'github'
+    alt: 'github',
+    url: projectUrl.github
   },
   {
     src: 'linkedin.svg',
-    alt: 'linkedin'
+    alt: 'linkedin',
+    url: projectUrl.linkedin
   },
   {
     src: 'email.svg',
-    alt: 'email'
+    alt: 'email',
+    url: projectUrl.email
   }
 ] as const
 

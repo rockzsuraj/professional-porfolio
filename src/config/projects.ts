@@ -20,3 +20,9 @@ export const projects: Project[] = [
   },
   // Add more projects
 ];
+
+export const projectUrl = {
+  github: 'https://github.com/rockzsuraj',
+  linkedin: 'https://www.linkedin.com/in/suraj-kumar01',
+  email: 'mailto:mail4suraj11@gmail.com?subject=Portfolio%20Contact&body=Hello...'
+}

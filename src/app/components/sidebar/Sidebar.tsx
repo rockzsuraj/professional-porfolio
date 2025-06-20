@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Icon from '../icons/icons';
 import { icons } from '@/lib/constants';
 
@@ -11,9 +10,7 @@ export default function Sidebar() {
           <div className="h-1/6 w-0.5 bg-gray ml-auto mr-auto" />
           <div className="flex flex-col items-center">
             {icons.map(icon => {
-              return <Link href={icon.alt} key={icon.alt} className='bg-background'>
-                <Icon key={icon.alt} src={icon.src} alt={icon.alt} />
-              </Link>
+              return <Icon url={icon.url} key={icon.alt} src={icon.src} alt={icon.alt} />
             })}
           </div>
         </div>

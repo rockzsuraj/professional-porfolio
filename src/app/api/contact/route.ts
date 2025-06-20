@@ -1,3 +1,4 @@
+import Logger from '@/lib/logger';
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
@@ -31,8 +32,9 @@ async function sendEmail({
             text: text,
             html: html,
         });
-    } catch (error: any) {
-        throw new Error(error?.message);
+    } catch (error: unknown) {
+        Logger.error('Error sending email!', error);
+        throw new Error('error');
     }
 }
 
@@ -55,7 +57,8 @@ export async function POST(request: Request) {
         });
 
         return NextResponse.json({ success: true });
-    } catch (error) {
+    } catch (error: unknown) {
+        Logger.error('Error sending email!', error)
         return NextResponse.json(
             { error: 'Failed to send message' },
             { status: 500 }

@@ -2,7 +2,6 @@ import { icons } from "@/lib/constants";
 import Heading from "../components/heading/Heading";
 import PageHeading from "../components/heading/PageHeading";
 import Icon from "../components/icons/icons";
-import Link from "next/link";
 import MessageMe from "../components/contacts/MessageMe";
 
 const contact = () => {
@@ -30,9 +29,7 @@ const contact = () => {
             <div className="flex flex-row pt-5">
                 {icons.map(icon => (
                     <div key={icon.alt}>
-                        <Link href={icon.alt}>
-                            <Icon alt={icon.alt} src={icon.src} />
-                        </Link>
+                            <Icon url={icon.url} alt={icon.alt} src={icon.src} />
                     </div>
                 ))}
             </div>

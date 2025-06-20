@@ -1,5 +1,6 @@
 import React from 'react'
 import Icon from '../icons/icons'
+import { projectUrl } from '@/config/projects'
 
 const MessageMe = () => {
     return (
@@ -9,7 +10,7 @@ const MessageMe = () => {
             </div>
             <div className='flex flex-row items-center'>
                 <div className='w-15 mr-2'>
-                    <Icon alt='linkedin' src='linkedin.svg' width={40} />
+                    <Icon url={projectUrl.linkedin} alt='linkedin' src='linkedin.svg' width={40} />
                 </div>
                 <div className='text-gray text-sm font-light break-all'>
                     <p>https://www.linkedin.com/in/suraj-kumar01/</p>
@@ -17,7 +18,7 @@ const MessageMe = () => {
             </div>
             <div className='flex flex-row pt-5 items-center text-wrap'>
                 <div className=''>
-                    <Icon alt='email' src='email.svg' />
+                    <Icon url={projectUrl.email} alt='email' src='email.svg' />
                 </div>
                 <div className='text-gray text-sm font-light text-wrap break-all'>
                     <p>mail4suraj11@gmail.com</p>

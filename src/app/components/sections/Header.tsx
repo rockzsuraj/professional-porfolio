@@ -15,14 +15,16 @@ export default function Header() {
   return (
     <header className=' py-5'>
       <nav className='flex flex-row justify-between items-center'>
-        <Link href="/" className='flex flex-row items-center pl-5'>
+        <div className='flex flex-row items-center pl-5'>
           <div>
-            <Icon alt='logo1' src='logo1.svg' height={25} width={25} />
+            <Icon url='/' alt='logo1' src='logo1.svg' height={25} width={25} />
           </div>
-          <div className='pl-[5px]'>
-            Suraj
+          <div className='pl-[5px] hover:animate-pulse'>
+            <Link href='/'>
+              Suraj
+            </Link>
           </div>
-        </Link>
+        </div>
 
         {/* Desktop Navigation */}
         <nav className='hidden md:flex'>
@@ -72,9 +74,7 @@ export default function Header() {
           </nav>
           <div className='flex flex-row justify-center'>
             {icons.map(icon => (
-              <Link key={icon.alt} href={icon.alt}>
-                <Icon alt={icon.alt} src={icon.src} />
-              </Link>
+              <Icon url={icon.url} key={icon.alt} alt={icon.alt} src={icon.src} />
             ))}
           </div>
         </div>
