@@ -25,7 +25,7 @@ const Button = ({
             className={`hover:bg-[#C778DD33] transition-colors border-1 border-${disabled ? 'gray' : 'primary'} text-${disabled ? 'gray' : 'white'} my-5 text-sm py-1 px-5`}
         >
             {children}
-            {icon && disabled ? <span className='pl-2 inline-block rotate-350 items-center'>&ge;</span>
+            {icon && disabled ? <span className='pl-2 rotate-350 items-center'>&ge;</span>
                 : <span className='pl-2'>&lt;~&gt;</span>}
         </button>
     );

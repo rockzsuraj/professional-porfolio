@@ -16,27 +16,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className=''>
+    <html lang="en">
       <head>
         <Head />
       </head>
-      <body className={`${inter.className} flex flex-col`}>
-        <div className='flex flex-1'>
-          <div className='hidden md:flex overflow-hidden'>
-            <Sidebar />
-          </div>
-          <div className='flex-1 flex flex-col'>
-            <Header />
-            <main className=''>
-              {children}
-              <SpeedInsights />
-            </main>
-          </div>
-          <div className='hidden md:flex overflow-hidden'>
-            <SidebarRight />
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
+        {/* Wrap the main content in a div with flex-grow */}
+        <div className="flex flex-col flex-grow">
+          <div className='flex flex-1'>
+            <aside className='hidden md:flex overflow-hidden'>
+              <Sidebar />
+            </aside>
+            
+            <div className='flex-1 flex flex-col'>
+              <Header />
+              <main className='flex-grow'>
+                {children}
+              </main>
+            </div>
+            
+            <aside className='hidden md:flex overflow-hidden'>
+              <SidebarRight />
+            </aside>
           </div>
         </div>
+        
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );

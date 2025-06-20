@@ -3,14 +3,9 @@ import Icon from "../icons/icons";
 import Button from "../ui/button";
 import Image from "next/image";
 import ContactForm from "../form/ContactForm";
+import ContactModel from "../shared/ContactModel";
 
 export default function Hero() {
-  const [modelOpen, setModelOpen] = useState(false)
-
-  const handleContactForm = () => {
-    setModelOpen(!modelOpen);
-  }
-
   return (
     <section className="pt-20 flex flex-col md:flex-row">
       <div className="">
@@ -24,24 +19,7 @@ export default function Hero() {
           <p className="pt-5 text-base text-gray">
             He crafts responsive websites, apps for iOS and Android platforms, and backend servers where techStacksnologies meet creativity.
           </p>
-          <div>
-            <Button
-              onClick={handleContactForm}
-              disabled={false}
-              className="mt-6"
-            >
-              Contact Me!!
-            </Button>
-            <div>
-              {
-                modelOpen && (
-                  <div className="flex">
-                    <ContactForm close={handleContactForm} />
-                  </div>
-                )
-              }
-            </div>
-          </div>
+          <ContactModel />
         </div>
       </div>
       <div className="flex ">

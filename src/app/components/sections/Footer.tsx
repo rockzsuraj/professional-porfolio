@@ -7,7 +7,7 @@ const Footer = () => {
     <div className='flex flex-col pb-8'>
       <div className='flex flex-col md:flex-row border-t-1 mt-20 justify-between md:px-20'>
         <div className='flex flex-col p-10'>
-          <div className='flex flex-row self-center'>
+          <div className='flex flex-row self-center items-center'>
             <div className='w-7'>
               <Icon src='logo1.svg' alt='logo' />
             </div>
@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
         <div className='self-center md:mt-10 p-2 flex flex-col items-center'>
           <h1 className='font-medium'>Media</h1>
-          <div className='flex md:pt-5'>
+          <div className='flex md:pt-5 items-center'>
             {
               icons.map(icon => (
                   <Icon key={icon.alt} url={icon.url} src={icon.src} alt={icon.alt} />

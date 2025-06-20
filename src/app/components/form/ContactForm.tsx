@@ -53,7 +53,7 @@ const ContactForm: FC<Props> = (props) => {
     }
 
     return (
-        <div className='fixed inset-0 flex items-center justify-center z-30 backdrop-blur-none'>
+        <div className='fixed inset-0 flex items-center justify-center z-30 backdrop-blur-lg' onClick={props.close}>
             <div className='relative bg-background border-1 border-gray max-w-full'>
                 <button onClick={props.close} className='absolute right-4 top-4 text-gray'>X</button>
                 <div className='flex col p-5'>

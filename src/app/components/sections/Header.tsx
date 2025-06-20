@@ -50,7 +50,7 @@ export default function Header() {
           {isMenuOpen ? (
             <span className='text-2xl text-gray pr-5'>X</span>
           ) : (
-            <Icon src='hamburger.svg' alt='hamburger menu' />
+            <Icon url='' src='hamburger.svg' alt='hamburger menu' />
           )}
         </button>
       </nav>
