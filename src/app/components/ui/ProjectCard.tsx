@@ -20,7 +20,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
     return (
         <div className='w-70 lg:w-90 mr-5 mb-5 border-1'>
             <div className='relative h-50'>
-                <Image fill alt={title} src={image} className='object-cover' />
+                <Image fill alt={title} src={image} className='object-cover'/>
             </div>
             <div className='text-gray flex flex-wrap border-t-1 border-b-1 pt-2 pb-2'>
                 {

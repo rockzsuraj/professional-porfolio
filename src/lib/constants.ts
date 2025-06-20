@@ -1,5 +1,7 @@
 import { projectUrl } from "@/config/projects";
 
+export const defaultImage = 'https://dummyimage.com/600x400.png';
+
 export const icons = [
   {
     src: 'github.svg',
@@ -17,6 +19,15 @@ export const icons = [
     url: projectUrl.email
   }
 ] as const
+
+export interface ProjectData {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    techStacks: string[];
+    status: string[];
+}
 
 export const projectsData = [
   {

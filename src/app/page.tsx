@@ -1,5 +1,3 @@
-'use client';
-
 import AboutMe from "./components/About-me/AboutMe";
 import Projects from "./components/cards/Projects";
 import Skills from "./components/cards/Skills";

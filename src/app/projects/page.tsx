@@ -1,10 +1,12 @@
-import { projectsData, smallProjects } from "@/lib/constants";
+import { ProjectData, smallProjects } from "@/lib/constants";
 import Heading from "../components/heading/Heading";
 import PageHeading from "../components/heading/PageHeading";
 import ProjectCard from "../components/ui/ProjectCard";
 import SmallProjectCard from "../components/ui/SmallProjectCard";
+import { fetchGitHubProjects } from "@/lib/fetchGithubProjects";
 
-const projects = () => {
+const projects = async () => {
+    const projectsData: ProjectData[] = await fetchGitHubProjects();
     return (
         <div className="pl-5">
             <PageHeading title="projects" />
@@ -17,7 +19,7 @@ const projects = () => {
                 <Heading title="complete-apps" />
             </div>
             <div className="flex flex-row flex-wrap pt-5">
-                {projectsData.map(project => (
+                {projectsData?.map((project) => (
                     <ProjectCard key={project.id} project={project} />
                 ))}
             </div>

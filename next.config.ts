@@ -1,8 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-   images: {
-    domains: ['images.unsplash.com'], // Add all domains you need
+  images: {
+    domains: ['opengraph.githubassets.com',
+      'placehold.co',
+      'via.placeholder.com',
+      'img.shields.io',
+      'opencollective.com',
+      'dummyimage.com']
   }
 };
 

@@ -1,4 +1,4 @@
-'use client'
+
 import React, { ReactNode, MouseEvent } from 'react';
 
 interface ButtonProps {
