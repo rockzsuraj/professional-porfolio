@@ -29,6 +29,11 @@ const ContactForm: FC<Props> = (props) => {
 
     const handleSetSubmitting = async (event: MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
+        const { email, message, name, title } = formData;
+        if (!email || !message || !name || !title) {
+            setSubmitStatus('info')
+            return;
+        }
         setIsSubmitting(true);
         try {
             const response = await fetch('/api/contact', {
@@ -56,7 +61,7 @@ const ContactForm: FC<Props> = (props) => {
         <div className='fixed inset-0 flex items-center justify-center z-30 backdrop-blur-lg' onClick={props.close}>
             <div className='relative bg-background border-1 border-gray max-w-full'>
                 <button onClick={props.close} className='absolute right-4 top-4 text-gray'>X</button>
-                <div className='flex col p-5'>
+                <div className='flex col p-5' onClick={(e) => e.stopPropagation()}>
                     <form>
                         <div className='mt-10 flex flex-row'>
                             <input
@@ -118,6 +123,9 @@ const ContactForm: FC<Props> = (props) => {
                                 </button>
                             </div>
                         </div>
+                        {submitStatus === 'info' && (
+                            <p className="text-green-600">Please fill all required form!</p>
+                        )}
                         {submitStatus === 'success' && (
                             <p className="text-green-600">Message sent successfully!</p>
                         )}
