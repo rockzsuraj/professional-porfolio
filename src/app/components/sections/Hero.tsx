@@ -1,8 +1,5 @@
-import { useState } from "react";
 import Icon from "../icons/icons";
-import Button from "../ui/button";
 import Image from "next/image";
-import ContactForm from "../form/ContactForm";
 import ContactModel from "../shared/ContactModel";
 
 export default function Hero() {
