@@ -6,13 +6,9 @@ import Header from './components/sections/Header';
 import Sidebar from './components/sidebar/Sidebar';
 import SidebarRight from './components/sidebar/SidebarRight';
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Head from './head';
 
 const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'Suraj | Portfolio',
-  description: 'Professional portfolio of Suraj',
-};
 
 export default function RootLayout({
   children,
@@ -21,6 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className=''>
+      <head>
+        <Head />
+      </head>
       <body className={`${inter.className} flex flex-col`}>
         <div className='flex flex-1'>
           <div className='hidden md:flex overflow-hidden'>
