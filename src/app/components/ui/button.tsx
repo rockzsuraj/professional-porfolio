@@ -22,12 +22,11 @@ const Button = ({
             type='button'
             onClick={onClick}
             disabled={disabled}
-            className={`hover:bg-[#C778DD33] transition-colors border-1 border-${disabled ? 'gray' : 'primary'} my-5 text-sm py-1 px-5`}
+            className={`hover:bg-[#C778DD33] transition-colors border-1 border-${disabled ? 'gray' : 'primary'} text-${disabled ? 'gray' : 'white'} my-5 text-sm py-1 px-5`}
         >
-            <p className={`text-${disabled ? 'gray' : 'white'}`}>
-                {children}
-                {icon && <span className='pl-4'>&lt;~&gt;</span>}
-            </p>
+            {children}
+            {icon && disabled ? <span className='pl-2 inline-block rotate-350 items-center'>&ge;</span>
+                : <span className='pl-2'>&lt;~&gt;</span>}
         </button>
     );
 };

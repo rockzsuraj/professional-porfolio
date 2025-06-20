@@ -14,15 +14,15 @@ export default function Header() {
 
   return (
     <header className=' py-5'>
-      <div className='flex flex-row justify-between items-center'>
-        <div className='flex flex-row items-center pl-5'>
+      <nav className='flex flex-row justify-between items-center'>
+        <Link href="/" className='flex flex-row items-center pl-5'>
           <div>
             <Icon alt='logo1' src='logo1.svg' height={25} width={25} />
           </div>
           <div className='pl-[5px]'>
             Suraj
           </div>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className='hidden md:flex'>
@@ -51,7 +51,7 @@ export default function Header() {
             <Icon src='hamburger.svg' alt='hamburger menu' />
           )}
         </button>
-      </div>
+      </nav>
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
