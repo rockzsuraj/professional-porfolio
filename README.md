@@ -1,3 +1,40 @@
+# 🚀 Modern Developer Portfolio
+
+**A high-performance, self-updating portfolio built with Next.js 15.3, Tailwind CSS 4.1, and TypeScript**  
+
+*Light and dark theme example*
+
+<img width="1674" alt="Screenshot 2025-06-22 at 2 28 07 AM" src="https://github.com/user-attachments/assets/a5d38419-5120-4207-a7b9-fed571c94e23" />
+<img width="486" alt="Screenshot 2025-06-22 at 2 29 00 AM" src="https://github.com/user-attachments/assets/89a10bdf-a2f9-4a46-beb8-81bfb4ca46c7" />
+
+
+## ✨ Features
+
+- **Automatic Project Sync**  
+  - Fetches GitHub repositories in real-time  
+  - Categorizes projects (Major/Minor/Archived)  
+  - Displays README images automatically  
+
+- **Cutting-Edge Tech Stack**  
+  - Next.js 15.3 (App Router)  
+  - Tailwind CSS 4.1 with container queries  
+  - TypeScript 5.4  
+  - Shadcn/ui components (optional)  
+
+- **Advanced Functionality**  
+  - Theme engine with CSS variables  
+  - Contact form with email API (Resend/Nodemailer)  
+  - Responsive on all devices  
+  - 98+ Lighthouse score  
+
+## 🛠️ Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/rockzsuraj/portfolio.git
+cd portfolio
+```
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
