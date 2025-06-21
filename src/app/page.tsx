@@ -1,10 +1,13 @@
+import { fetchGitHubProjects } from "@/lib/fetchGithubProjects";
 import AboutMe from "./components/About-me/AboutMe";
-import Projects from "./components/cards/Projects";
 import Skills from "./components/cards/Skills";
 import Contacts from "./components/contacts/Contacts";
 import Hero from "./components/sections/Hero";
+import ProjectsClient from "./projects/ProjectsClient";
 
-export default function Home() {
+export default async function Home() {
+  const projectsData = await fetchGitHubProjects();
+
   return (
     <main className="flex flex-col ">
       <section className="flex flex-col pl-5 pr-5">
@@ -28,16 +31,16 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="">
-        <Projects />
+      <section className="pl-5 pr-5 ">
+        <ProjectsClient initialProjects={projectsData} />
       </section>
-      <section className="pl-5 pr-5">
+      <section className="pt-15 pl-5 pr-5">
         <Skills />
       </section>
-      <section className="pl-5 pr-5">
+      <section className="pt-15 pl-5 pr-5">
         <AboutMe />
       </section>
-      <section className="pl-5 pr-5">
+      <section className="pt-15 pl-5 pr-5">
         <Contacts />
       </section>
     </main>

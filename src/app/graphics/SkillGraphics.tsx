@@ -6,8 +6,8 @@ const SkillGraphics = () => {
     return (
         <div className='flex flex-col w-80 h-80 pt-10 md:mr-10'>
             <div className='flex pt-10'>
-                <div>
-                    <Icon alt='dots' src='dots.svg' width={70}/>
+                <div className='w-30'>
+                    <Icon alt='dots' src='dots.svg' width={70} height={70}/>
                 </div>
                 <div className='h-20 w-20 border-1 border-gray ml-50 transform -translate-y-10' />
             </div>
@@ -25,7 +25,7 @@ const SkillGraphics = () => {
                     </div>
                 </div>
                 <div className='transform -translate-y-10'>
-                    <Icon alt='dots' src='dots.svg' width={70} />
+                    <Icon alt='dots' src='dots.svg' width={70} height={70}/>
                 </div>
                 <div className='h-12 w-12 border-1 border-gray' />
             </div>

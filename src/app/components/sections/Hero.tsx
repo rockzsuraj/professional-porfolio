@@ -6,7 +6,7 @@ import ContactModel from "../shared/ContactModel";
 export default function Hero() {
   return (
     <section className="pt-20 flex flex-col md:flex-row">
-      <div className="">
+      <article className="">
         <div className="flex flex-col">
           <h1 className="font-semibold text-2xl tracking-wide">
             Suraj is a{' '}
@@ -19,8 +19,8 @@ export default function Hero() {
           </p>
           <ContactModel />
         </div>
-      </div>
-      <div className="flex ">
+      </article>
+      <article className="flex pt-10 md:pt-0">
         <div className="flex flex-col md:pl-20  pb-0 mb-0 h-80">
           <div className="flex flex-row pb-0 mb-0">
             <div className="w-20 h-30 border border-primary translate-y-1/3 flex items-center justify-end">
@@ -30,7 +30,7 @@ export default function Hero() {
               <div className="w-10 h-10 border border-primary border-l-0" />
             </div>
           </div>
-          <div className=" w-70 md:w-90 h-60 transform -translate-y-40 translate-x-15">
+          <figure className=" w-70 md:w-90 h-60 transform -translate-y-40 translate-x-15">
             <Image
               src="/image/pic.png"
               alt="Profile picture"
@@ -41,12 +41,12 @@ export default function Hero() {
               <p className="bg-primary h-3 w-3 mr-1" />
               <p className="text-gray text-sm fontsize-10">Currently working on <span className="text-white">Portfolio</span></p>
             </div>
-            <div className=" w-15 h-15 transform translate-x-55 -translate-y-32 md:-translate-y-30 md:translate-x-60">
-              <Icon src="dots.svg" alt="Decorative dots" width={60} height={60} />
+            <div className=" w-20 h-20 transform translate-x-55 -translate-y-35 md:-translate-y-30 md:translate-x-60">
+              <Icon src="dots.svg" alt="Decorative dots" width={70} height={70} />
             </div>
-          </div>
+          </figure>
         </div>
-      </div>
+      </article>
     </section>
   );
 }

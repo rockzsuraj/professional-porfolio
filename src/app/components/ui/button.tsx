@@ -15,8 +15,6 @@ const Button = ({
     disabled = false,
     icon = false
 }: ButtonProps) => {
-    console.log('children');
-
     return (
         <button
             type='button'
