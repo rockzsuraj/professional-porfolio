@@ -4,9 +4,9 @@
 
 *Light and dark theme example*
 
-<img width="1674" alt="Screenshot 2025-06-22 at 2 28 07 AM" src="https://github.com/user-attachments/assets/cc410ec3-b0ab-4d8f-b881-c0d5ee32de17" />
-<img width="486" alt="Screenshot 2025-06-22 at 2 29 00 AM" src="https://github.com/user-attachments/assets/12f87445-77dc-4369-ac58-efd9ad620f9d" />
+![Screenshot](https://github.com/user-attachments/assets/ade7aff0-9ba6-4d74-8ef7-1012dc90141b)
 
+![Screenshot](https://github.com/user-attachments/assets/768ae356-c19c-4fa9-8042-9f92831040a3)
 
 ## ✨ Features
 
