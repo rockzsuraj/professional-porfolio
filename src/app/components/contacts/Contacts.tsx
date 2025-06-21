@@ -1,6 +1,7 @@
 import React from 'react'
 import SectionHeading from '../heading/SectionHeading'
 import MessageMe from './MessageMe'
+import ContactModel from '../shared/ContactModel'
 
 const Contacts = () => {
     return (
@@ -12,6 +13,7 @@ const Contacts = () => {
                 <div>
                     <p className='text-gray pt-10 font-light'>I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me</p>
                 </div>
+                <ContactModel />
                 <div className='mt-10 md:mt-0'>
                     <MessageMe />
                 </div>

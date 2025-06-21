@@ -79,23 +79,23 @@ type SkillCategory = {
 export const skills: SkillCategory[] = [
   {
     category: "Programming Languages",
-    technologies: ["JavaScript", "TypeScript", "Python", "Java", "C#", "Go", "Rust"]
+    technologies: ["JavaScript", "TypeScript", "Java", "C++"]
   },
   {
     category: "Web Development",
-    technologies: ["HTML", "CSS", "Sass", "Less"]
+    technologies: ["HTML", "CSS", "Tailwind", "Chakra UI"]
   },
   {
     category: "Frontend Frameworks",
-    technologies: ["React", "Next.js", "Vue", "Angular", "Svelte"]
+    technologies: ["React", "Next.js"]
   },
   {
     category: "Backend Technologies",
-    technologies: ["Node.js", "Express", "NestJS", "Spring Boot", "Django", "Flask"]
+    technologies: ["Node.js", "Express", "NestJS", "Spring Boot"]
   },
   {
     category: "Mobile Development",
-    technologies: ["React Native", "Flutter", "Swift", "Kotlin"]
+    technologies: ["React Native", "Flutter", "Swift"]
   },
   {
     category: "Databases",
@@ -103,19 +103,19 @@ export const skills: SkillCategory[] = [
   },
   {
     category: "Cloud & DevOps",
-    technologies: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform"]
+    technologies: ["AWS", "Docker"]
   },
   {
     category: "Testing",
-    technologies: ["Jest", "Cypress", "Testing Library", "Mocha", "Chai"]
+    technologies: ["Selenium"]
   },
   {
     category: "Tools",
-    technologies: ["VS Code", "Git", "Postman", "Figma", "Jira", "Webpack"]
+    technologies: ["VS Code", "Git", "Postman", "Figma", "Jira"]
   },
   {
     category: "Other",
-    technologies: ["GraphQL", "REST API", "WebSockets", "WebRTC"]
+    technologies: ["GraphQL", "REST API", "WebSockets"]
   }
 ];
 

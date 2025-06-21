@@ -1,15 +1,15 @@
 'use client'
 import React, { useState } from 'react'
-import { ProjectData } from '@/lib/constants';
 import SectionHeading from '../components/heading/SectionHeading';
 import ProjectCard from '../components/ui/ProjectCard';
+import { Project } from '@/types/project';
 
 interface ProjectsClientProps {
-    initialProjects: ProjectData[];
+    initialProjects: Project[];
 }
 
 const ProjectsClient = ({ initialProjects }: ProjectsClientProps) => {
-    const [projectsData] = useState<ProjectData[]>(initialProjects);
+    const [projectsData] = useState<Project[]>(initialProjects);
     const [showAll, setShowAll] = useState(false);
     const displayProjects = showAll ? projectsData : projectsData.slice(0, 3);
 
@@ -20,9 +20,11 @@ const ProjectsClient = ({ initialProjects }: ProjectsClientProps) => {
 
     return (
         <article className='flex flex-col mt-15'>
-            <div className='flex items-center justify-between'>
-                <SectionHeading title='projects' />
-                <div>
+            <div className='flex flex-row items-center'>
+                <div className='flex-1'>
+                    <SectionHeading title='projects' />
+                </div>
+                <div className=''>
                     <button className='hover:animate-pulse' onClick={toggleShowAll}>
                         {!showAll ? 'Show all' : 'Show less'}
                         <span> ~~&gt;</span>

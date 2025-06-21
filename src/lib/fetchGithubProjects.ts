@@ -29,6 +29,9 @@ async function fetchReadmeImage(repoName: string, owner: string): Promise<string
       }
     );
 
+    console.log('response image', response);
+
+
     if (!response.ok) return defaultImage;
 
     const data = await response.json();
@@ -54,11 +57,15 @@ export async function fetchGitHubProjects() {
 
   if (!res.ok) throw new Error("GitHub API error");
 
-  const githubRepos: GitHubRepo[] = await res.json();
+  let githubRepos: GitHubRepo[] = await res.json();
+  githubRepos = githubRepos.sort((a, b) =>
+    new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+  );
   const owner = process.env.GITHUB_USERNAME;
 
-  const activeRepos = githubRepos.filter(repo => !repo.archived);
+  const activeRepos = githubRepos.filter(repo => !repo.archived && repo.topics.includes('major-project'));
   const archivedRepos = githubRepos.filter(repo => repo.archived);
+  const smallProjectsRepos = githubRepos.filter(repo => !repo.archived && !repo.topics.includes('major-project'))
 
   const activeProjects = await Promise.all(
     activeRepos.map(async (repo) => {
@@ -70,6 +77,26 @@ export async function fetchGitHubProjects() {
         image,
         techStacks: [repo.language, ...repo.topics].filter(Boolean) as string[],
         status: repo.disabled ? ["Disabled"] : ["Active"],
+        url: repo.html_url,
+        createdAt: repo.created_at,    // From GitHub API
+        lastUpdated: repo.pushed_at
+      };
+    })
+  );
+
+  const minorProjects = await Promise.all(
+    smallProjectsRepos.map(async (repo) => {
+      const image = await fetchReadmeImage(repo.name, owner);
+      return {
+        id: repo.id,
+        title: repo.name.replace(/[-_]/g, ' '),
+        description: repo.description || "No description available",
+        image,
+        techStacks: [repo.language, ...repo.topics].filter(Boolean) as string[],
+        status: repo.disabled ? ["Disabled"] : ["Active"],
+        url: repo.html_url,
+        createdAt: repo.created_at,    // From GitHub API
+        lastUpdated: repo.pushed_at
       };
     })
   );
@@ -79,9 +106,15 @@ export async function fetchGitHubProjects() {
     title: repo.name.replace(/[-_]/g, ' '),
     description: repo.description || "Archived project",
     image: defaultImage,
-    techStacks: [repo.language, ...repo.topics].filter(Boolean) as string[],
+    techStacks: [repo.language, repo.topics].filter(Boolean) as string[],
     status: ["Archived"],
+    url: repo.html_url,
+    createdAt: repo.created_at,    // From GitHub API
+    lastUpdated: repo.pushed_at
   }));
 
-  return [...activeProjects, ...archivedProjects];
+  return {
+    majorProject: [...activeProjects, ...archivedProjects],
+    minorProjects: [...minorProjects]
+  };
 }

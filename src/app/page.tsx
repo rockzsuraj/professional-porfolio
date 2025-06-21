@@ -6,7 +6,7 @@ import Hero from "./components/sections/Hero";
 import ProjectsClient from "./projects/ProjectsClient";
 
 export default async function Home() {
-  const projectsData = await fetchGitHubProjects();
+  const github = await fetchGitHubProjects();
 
   return (
     <main className="flex flex-col ">
@@ -32,7 +32,7 @@ export default async function Home() {
         </div>
       </section>
       <section className="pl-5 pr-5 ">
-        <ProjectsClient initialProjects={projectsData} />
+        <ProjectsClient initialProjects={github.majorProject} />
       </section>
       <section className="pt-15 pl-5 pr-5">
         <Skills />
