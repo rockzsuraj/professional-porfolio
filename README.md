@@ -1,6 +1,6 @@
 # 🚀 Modern Developer Portfolio
 
-**A high-performance, self-updating portfolio built with Next.js 15.3, Tailwind CSS 4.1, and TypeScript**  
+**A low-performance, self-updating portfolio built with Next.js 15.3, Tailwind CSS 4.1, and TypeScript**  
 
 *Light and dark theme example*
 
